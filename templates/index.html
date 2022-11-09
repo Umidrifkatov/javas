@@ -1,390 +1,510 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
-
-
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title> </title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.ico' %}" />
-        <!-- Bootstrap Icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-        <!-- SimpleLightbox plugin CSS-->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">DOCERE</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#about">Формат</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Программа</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Тарифы</a></li>
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pricing example · Bootstrap v5.2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.ico' %}" />
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+</head>
+
+<body>
+
+
+    <!-- весь контейнер главный -->
+    <div class="container py-3">
+        <header>
+            <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+                <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+                    <img src="{%static 'assets/logo.png'%}" alt="" style="width: 100px;">
+                </a>
+
+                <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+                    <a class="me-3 py-2 text-dark text-decoration-none" href="#main">Главная</a>
+                    <a class="me-3 py-2 text-dark text-decoration-none" href="#program">Программа</a>
+                    <a class="me-3 py-2 text-dark text-decoration-none" href="#prices">Цены</a>
+                    <a class="py-2 text-dark text-decoration-none" href="#contact">Контакты</a>
+                </nav>
+            </div>
+        </header>
+
+
+<!-- херо главная -->
+        <div class=" text-center">
+            <img class="d-block mx-auto mb-4" src="{% static 'assets/logo.png' %}" alt="" width="250">
+            <h1 class="display-5 fw-bold">Применение скелетной опоры в ортодонтии</h1>
+            <div class="col-lg-6 mx-auto">
+              <!-- <p class="lead mb-4">Сложные ортодонтические случаи</p> -->
+              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <!-- <button type="button" class="btn btn-outline-primary btn-lg mt-2 px-4 gap-3">Записаться на курс</button> -->
+              </div>
+            </div>
+          </div>
+
+
+<!-- hero benedict -->     
+        <div class="p-5 rounded-3" id="main">
+            <!-- <h1 class="fw-bold"> Сложные ортодонтические случаи
+                Применение скелетной опоры </h1> -->
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+              <div class="col-10 col-sm-8 col-lg-6">
+                <img src="{% static 'assets/img/bene.png'%}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+              </div>
+              <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3">Профессор Benedict Wilmes</h1>
+                <p class="lead">Легендарный доктор, который направляет и ведет современную западную ортодонтию. <br> Главный мировой эксперт по скелетным опорам.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                  <button type="button" class="btn btn-outline-primary btn-lg px-4 me-md-2"> <a href="#program" style="text-decoration: none; ">Программа</a> </button>
+                  <button type="button" class="btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Связаться</button>
+                </div>
+              </div>
+            </div>
+          </div>  
+
+
+
+
+
+
+
+
+        
+<!-- аргументы -->
+          <div class="row align-items-md-stretch">
+            <div class="col-md-6 mt-2">
+                <div class="h-100 p-5 bg-light border rounded-3">
+                    <h4>Для кого?</h4>
+                  <p>Курс предназначен для врачей - ортодонтов, ординаторов и магистров , а также для студентов, которые хотят начать свой путь в направлении ортодонтии</p>
+                  
+                </div>
+            </div>
+                
+            <div class="col-md-6 mt-2">
+              <div class="h-100 p-5 text-bg-dark rounded-3">
+                <h4>О чем?</h4>
+                <p>Интеграция последних достижений в области цифровых технологий , таких как виртуальное планирование установки мини-имплантов (TAD), направляющие для установки, проектирование CAD-CAM и 3D-печать ортодонтических аппаратов , значительно расширяет возможности.
+                    
+                    </p>
+                
+              </div>
+            </div>
+
+            <div class="col-md-6 mt-2">
+                <div class="h-100 p-5 text-bg-dark rounded-3">
+                    <p>Мини-имплантаты с различными типами абатментов и соединителей по зволяют создавать универсальные и экономичные аппараты для самых разных ортопедических и ортодонтических применений.</p>
+                  
+                </div>
+              </div>
+            <div class="col-md-6 mt-2">
+              <div class="h-100 p-5 bg-light border rounded-3">
+                <h4>Где и когда?</h4>
+                <p>Двухдневный лекционно-демонстрационный курс в столице Узбекистана - Ташкенте в конференц зале отеля Hilton 24-25 Февраля с 9:30 до 18:30</p>
+                
+              </div>
+            </div>
+          </div>
+
+
+
+
+<!-- программа курса -->
+          <div class="accordion accordion-flush mt-5" id="accordionFlushExample">
+            <h1 class="display-4 fw-normal text-center mb-3" id="program">Программа</h1>
+            <div class="row ">
+
+            <div class="col-lg-6">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button class="accordion-button collapsed fw-bold fs-5 btn btn-lg btn-dark rounded-3 border-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                          24 Февраля Теория
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" >
+                      <div class="accordion-body">
+                          Обоснование использования мини-имплантов в ортодонтической практике.
+                          Консультация. Оценка рисков и прогнозов.
+                          <br>   Прямая и непрямая опора.
+                          <br> Мезиализация нижних моляров
+                          <br> Мини-имплантаты с абатментами
+                          <br>Дистализация верхних моляров
+                          <br>– Дистализация моляров: показания; Аппараты для дистализации моляров;
+                          <br>– Осложнения при дистализации; Мини-имплантаты: выбор позиции и ориентиры;
+                          <br>– Межкорневые мини-имплантаты: недостатки;
+                          <br>– Дизайн непрямой опоры; Прямая опора: преимущества;
+                          <br>– Установка мини-имплантатов; Взаимодействие с пациентом;
+                          <br>– Асимметричная дистализация: методика; Дистализация и интрузия моляров:
+                          механика;
+                          <br>– Комбинация Beneslider с элайнерами; Механика аппарата Pendulum;
+                          <br>– Винтовая механика; Гибридный дистализатор Hyrax: преимущества;
+                          <br>– Цифровые технологии в планировании лечения.
+                          <br> Мезиализация верхних моляров
+                          <br>– Варианты лечения при отсутствии отдельных зубов;
+                          <br>– Закрытие дефектов: виды опоры;
+                          <br>– Движение моляров на верхней челюсти: проблема синуса;
+                          <br>– Выбор позиции мини-имплантата; – Прямая или непрямая опора: цели;
+                          <br>– T-Mesialslider: преимущества и недостатки;
+                          <br>– T-bow: недостатки непрямой опоры; Преимущества прямой опоры;
+                          <br>– Механика закрытия дефектов: При отсутствии боковых зубов; При отсутствии
+                          передних зубов</div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="accordion-item ">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                      <button class="accordion-button collapsed fw-bold fs-5 btn btn-lg btn-dark rounded-3 border-dark" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                          25 Февраля Теория и демонстрация
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" >
+                      <div class="accordion-body"> 
+                          <br> Ретракция En-Masse
+                          <br> Быстрое расширение неба и раннее лечение класса III
+                          <br> Апрайтинг моляров
+                          <br> Интрузия моляров
+                          <br> Выравнивание ретенированных зубов
+                          <br> Временные понтики с использованием мини-имплантов
+                          <br> Междисциплинарный подход;
+                          <br> Изменение положения моляров:
+                          <br> Дистальное положение мини-имплантата;
+                          <br> Мезиальное положение мини-имплантата;
+                          <br> Межкорневое положение мини-имплантатов.
+                          <br> Интрузия моляров: виды аппаратуры;
+                          <br> Форсированное прорезывание ретенированных зубов;
+                          <br> Экструзия корней: методика;
+                          <br> Анкилозированные зубы: PDL-дистракция;
+                          <br> Сохранение пространства для имплантации: методика.
+                          <br> Демонстрация: изгибание Beneslider</div>
+                    </div>
+                  </div>
+            </div>
+            
+            
+          </div>
+        </div>
+
+
+
+
+
+        <!-- цены проживания -->
+        <div id="prices" class="mt-5">
+
+            <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+                <h2>Стоимость проживания</h2>
+                <p class="fs-5 text-muted">Актуальные цены уточним в момент запроса</p>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                        <div class="card-header py-3 text-bg-primary border-primary">
+                            <h4 class="my-0 fw-normal">Hilton Tashkent</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$160<small class="text-muted fw-light">/ночь</small>
+                            </h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li> Single</li>
+                                <li> на месте проведения</li>
+                                <li> 5 звезд</li>
+                                <li> завтрак включен</li>
+                                
+                            </ul>
+                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa09aa0294d87a62759081ceb202a29889bf3f4b0cd02ade35d422ce0c70ff1af&amp;source=constructor" width="100%" height="240" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                        <div class="card-header py-3 text-bg-primary border-primary">
+                            <h4 class="my-0 fw-normal">Wyndham Tashkent</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$155<small class="text-muted fw-light">/ночь</small>
+                            </h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li> Single</li>
+                                <li> 3.4 км</li>
+                                <li> 5 звезд</li>
+                                <li> завтрак включен</li>
+                            </ul>
+                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Afa6fe06bbfded7f43c545dbfb603f01248d3014d0840c0c110e68e4b20b1d82c&amp;source=constructor" width="100%" height="240" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                        <div class="card-header py-3 text-bg-primary border-primary">
+                            <h4 class="my-0 fw-normal">ATECA Hotel Suites </h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">от $90<small class="text-muted fw-light">/ночь</small>
+                            </h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li> Double</li>
+                                <li> 3.5 км</li>
+                                <li> 4 звезды</li>
+                                <li> завтрак включен</li>
+                            </ul>
+                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aafd6bfd9e627bb04cc846d5050d4dade8d719561f304399a1367aba9c0ece065&amp;source=constructor" width="100%" height="240" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+<!-- цены курсов -->
+        <div id="courseprice">
+
+            <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+                <h2 class=" fw-normal">Стоимость инвестиций в свои знания</h2>
+                <p class="fs-5 text-muted">Двухдневный лекционно-демонстрационный курс 24-25 Февраля. Форма оплаты - любая удобная для вас</p>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                        <div class="card-header py-3 text-bg-primary border-primary">
+                            <h4 class="my-0 fw-normal">Раняя регистрация</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$599<small class="text-muted fw-light"></small>
+                            </h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Регистрация ДО 1 января 2023</li>
+                               
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Связаться</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                        <div class="card-header py-3 text-bg-primary border-primary">
+                            <h4 class="my-0 fw-normal">Позднаяя регистрация</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$699<small class="text-muted fw-light"></small>
+                            </h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Регистрация после 1 января 2023</li>
+                                
+                            </ul>
+                            <button type="button" class="w-100 btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Связаться</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- обратная связь футер -->
+        <hr class="mb-4 mt-4">
+        <div class="row" id="contact">
+            <div class="col-lg-4">
+
+                <p class="fw-bold">По указанным контактам, можете обратится по любым интересующим вас вопросам, а так же будем рады помочь с: </p>
+                    
+                <p>Бронированием и подбором авиа и ЖД билетов</p>
+                <p>Бронированием и поиском отелей</p>
+                <p>Организацией туров по городам Узбекистан</p>
+
+            </div>
+            <div class="col-lg-4 card">
+                <form method="POST" class="mx-2 my-2">{% csrf_token %}
+                    <h2>Мы с вами свяжемся</h2>
+                    <input type="text" name="name" id="Name1" class="form-control mb-2" placeholder="Имя">
+                    <input type="number" name="phone" class="form-control mb-2" id="" required placeholder="Телефон">
+                    <input type="email" name="email" class="form-control mb-2" id=""
+                        placeholder="Почта (необязательно)">
+                    <input type="textarea" name="message" class="form-control mb-2" id=""
+                        placeholder="Сообщение (необязательно)">
+                    <button type="submit" class="btn btn-primary mb-1 btn-xl">Отправить</button>
+                </form>
+            </div>
+            <div class="col-lg-4">
+                <h2>О нас</h2>
+                <p><i class="bi bi-phone"></i>  ‭+998 33-860-80-20‬</p>
+                <p>‭<i class="bi bi-phone"></i>  +998 99-862-80-20‬</p>
+                <p>‭<a href="https://www.instagram.com/docere_education/"><i class="bi bi-instagram"></i> Instagram Docere</a></p>
+                <p>‭<a href="https://www.instagram.com/dr.javakhir/"><i class="bi bi-instagram"></i> Instagram Javakhir</a></p>
+            </div>
+        </div>
+
+        <!-- сам футер -->
+        <!-- <footer class="pt-4 my-md-5 pt-md-5 border-top">
+            <div class="row">
+                <div class="col-12 col-md">
+
+                    <small class="d-block mb-3 text-muted">&copy; 2017–2022</small>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Features</h5>
+                    <ul class="list-unstyled text-small">
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Stuff for
+                                developers</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled text-small">
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another resource</a>
+                        </li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>About</h5>
+                    <ul class="list-unstyled text-small">
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
+                        <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
                     </ul>
                 </div>
             </div>
-        </nav>
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container px-4 px-lg-5 h-100">
-                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-                    <div class="col-lg-8 align-self-end">
-                        <h1 class="text-white font-weight-bold">ПРИМЕНЕНИЕ СКЕЛЕТНОЙ ОПОРЫ  
-                            </h1>
-                        <hr class="divider" />
+        </footer> -->
+    
+
+
+
+
+
+
+    <!-- кнопка триггер модал -->
+    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Launch static backdrop modal
+    </button> -->
+
+    <!-- модальная обратная связь -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form method="POST" class="text-center">{% csrf_token %}
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Обратная связь</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 mb-5">сложные ортодонтические случаи</p>
-                        <a class="btn btn-primary btn-xl" href="#about">Узнать больше</a>
+                    <div class="modal-body">
+
+
+                        <input type="text" name="name" id="Name1" class="form-control mb-2" placeholder="Имя">
+                        <input type="number" name="phone" class="form-control mb-2" id="" required
+                            placeholder="Телефон">
+                        <input type="email" name="email" class="form-control mb-2" id=""
+                            placeholder="Почта (необязательно)">
+                        <input type="textarea" name="message" class="form-control mb-2" id=""
+                            placeholder="Сообщение (необязательно)">
+
+
                     </div>
-                </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                        <button type="submit" class="btn btn-primary">Отправить</button>
+                    </div>
             </div>
-        </header>
-        <!-- About-->
-        <section class="page-section bg-primary" id="about">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0">Для кого этот курс?</h2>
-                        <hr class="divider divider-light" />
-                        <!-- <p class="text-white-75 mb-4">Курс предназначен для врачей - ортодонтов, ординаторов и магистров , а также для студентов, которые хотят начать свой путь в направлении ортодонтии</p> -->
-                    </div>
-                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- <div class="modal modal-sheet position-static d-block bg-secondary py-5" tabindex="-1" role="dialog" id="modalSheet">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content rounded-4 shadow">
+            <div class="modal-header border-bottom-0">
+              <h1 class="modal-title fs-5">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-
-
-
-
-
-
-
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <!-- <div class="accordion mb-2" id="accordionExample">
-                            <div class="accordion-item">
-                              <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Курс предназначен для врачей - ортодонтов, ординаторов и магистров , а также для студентов, которые хотят начать свой путь в направлении ортодонтии</button>
-                              </h2>
-                              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                  <p>Мини-имплантаты с различными типами абатментов и соединителей по зволяют создавать универсальные и экономичные аппараты для самых разных ортопедических и ортодонтических применений. 
-                                    Интеграция последних достижений в области цифровых технологий , таких как виртуальное планирование установки мини-имплантов (TAD), направляющие для установки, проектирование CAD-CAM и 3D-печать ортодонтических аппаратов , значительно расширяет возможности.</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div> -->
-                        <a class="btn btn-light btn-xl" href="#services">Посмотреть программу</a>
-                    </div>
-                </div>
+            <div class="modal-body py-0">
+              <p>This is a modal sheet, a variation of the modal that docs itself to the bottom of the viewport like the newer share sheets in iOS.</p>
             </div>
-        </section>
-        <!-- Services-->
-        <section class="page-section" id="services">
-            <div class="container px-4 px-lg-5">
-                <h2 class="text-center mt-0">Программа</h2>
-                <hr class="divider" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                          Accordion Item #1
-                        </button>
-                      </h2>
-                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                          Accordion Item #2
-                        </button>
-                      </h2>
-                      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                          Accordion Item #3
-                        </button>
-                      </h2>
-                      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                      </div>
-                    </div>
-                  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <div class="row">
-                    <div class="col-lg-6" >
-                        <div class="card">
-                            <div class="card-body">
-                              <h5 class="card-title">24 Февраля. Теория</h5>
-                              <p class="card-text">
-
-
-
- Обоснование использования мини-имплантов в ортодонтической практике.
-Консультация. Оценка рисков и прогнозов.
-<br>   Прямая и непрямая опора.
-<br> Мезиализация нижних моляров
-<br> Мини-имплантаты с абатментами
-<br>Дистализация верхних моляров
-<br>– Дистализация моляров: показания; Аппараты для дистализации моляров;
-<br>– Осложнения при дистализации; Мини-имплантаты: выбор позиции и ориентиры;
-<br>– Межкорневые мини-имплантаты: недостатки;
-<br>– Дизайн непрямой опоры; Прямая опора: преимущества;
-<br>– Установка мини-имплантатов; Взаимодействие с пациентом;
-<br>– Асимметричная дистализация: методика; Дистализация и интрузия моляров:
-механика;
-<br>– Комбинация Beneslider с элайнерами; Механика аппарата Pendulum;
-<br>– Винтовая механика; Гибридный дистализатор Hyrax: преимущества;
-<br>– Цифровые технологии в планировании лечения.
-<br> Мезиализация верхних моляров
-<br>– Варианты лечения при отсутствии отдельных зубов;
-<br>– Закрытие дефектов: виды опоры;
-<br>– Движение моляров на верхней челюсти: проблема синуса;
-<br>– Выбор позиции мини-имплантата; – Прямая или непрямая опора: цели;
-<br>– T-Mesialslider: преимущества и недостатки;
-<br>– T-bow: недостатки непрямой опоры; Преимущества прямой опоры;
-<br>– Механика закрытия дефектов: При отсутствии боковых зубов; При отсутствии
-передних зубов
-
-
-
-
-                              </p>
-                            </div>
-                          </div>
-                    </div>
-
-                    <div class="col-lg-6" >
-                        <div class="card">
-                            <div class="card-body">
-                              <h5 class="card-title">25 Февраля. Теория + демонстрация</h5>
-                              <p class="card-text">
-
-
-
-
-
-
-
-
-
-                            
-                                <br> Ретракция En-Masse
-                                <br> Быстрое расширение неба и раннее лечение класса III
-                                <br> Апрайтинг моляров
-                                <br> Интрузия моляров
-                                <br> Выравнивание ретенированных зубов
-                                <br> Временные понтики с использованием мини-имплантов
-                                <br> Междисциплинарный подход;
-                                <br> Изменение положения моляров:
-                                <br> Дистальное положение мини-имплантата;
-                                <br> Мезиальное положение мини-имплантата;
-                                <br> Межкорневое положение мини-имплантатов.
-                                <br> Интрузия моляров: виды аппаратуры;
-                                <br> Форсированное прорезывание ретенированных зубов;
-                                <br> Экструзия корней: методика;
-                                <br> Анкилозированные зубы: PDL-дистракция;
-                                <br> Сохранение пространства для имплантации: методика.
-                                <br> Демонстрация: изгибание Beneslider
-
-
-
-
-
-
-
-
-
-
-
-                              </p>
-                            </div>
-                          </div>
-                    </div>
-
-
-                </div>
-
-
-
-
-                
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-bullseye fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Ранняя регистрация</h3>
-                            <p class="text-muted mb-0">Ранняя регистрация до 1 января</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-calendar3 fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Длительность 2 дня курса</h3>
-                            <p class="text-muted mb-0">24-25 февраля 2023 с 9-30 до 18-30</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-clock fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Готовы помочь 24\7</h3>
-                            <p class="text-muted mb-0">По любому вопросу обращайтесь к нам</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Сделано с любовью</h3>
-                            <p class="text-muted mb-0">Сделаем все чтобы все прошло на высшем уровне</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="modal-footer flex-column border-top-0">
+              <button type="button" class="btn btn-lg btn-primary w-100 mx-0 mb-2">Save changes</button>
+              <button type="button" class="btn btn-lg btn-light w-100 mx-0" data-bs-dismiss="modal">Close</button>
             </div>
-        </section>
-        
-       
-        
-        <!-- Contact-->
-        <section class="page-section" id="contact">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 col-xl-6 text-center">
-                        <h2 class="mt-0">Let's Get In Touch!</h2>
-                        <hr class="divider" />
-                        <p class="text-muted mb-5">Ready to start your next project with us? Send us a messages and we will get back to you as soon as possible!</p>
-                    </div>
-                </div>
+          </div>
+        </div>
+      </div> -->
 
 
-                <h1>New post</h1>
-    
-    
-    
-    
-    
-    
-    
-    
-    <!-- rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr-------------------------------------------- -->
-                <form method="POST" class="post-form">{% csrf_token %}
-        {{ form.as_div }}
-        <button type="submit" class="save btn btn-default">Save</button>
-    </form>
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                        <i class="bi-phone fs-2 mb-3 text-muted"></i>
-                        <div>+1 (555) 123-4567</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Footer-->
-        <footer class="bg-light py-5">
-            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2022 - Company Name</div></div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- SimpleLightbox plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="{%static 'js/scripts.js' %}"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</body>
+
 </html>
