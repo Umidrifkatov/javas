@@ -60,9 +60,9 @@
 
 
         <h1 class="display-5 fw-bold lh-1 mb-3 mt-4 mycolor2">Профессор Benedict Wilmes</h1>
-        <p class="lead">Легендарный доктор, который направляет и ведет современную западную ортодонтию. <br> Главный мировой эксперт по скелетным опорам.</p>
+        <p class="lead">Легендарный доктор, который направляет и ведет современную западную ортодонтию. <br> Главный мировой эксперт по скелетным опорам. <br>24-25 февраля 2023</p>
         <button type="button" class="btn btn-outline-primary btn-lg px-4 me-md-2"> <a href="#program" style="text-decoration: none; ">Программа</a> </button>
-        <button type="button" class="btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Связаться</button>
+        <button type="button" class="btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Зарегистрироваться</button>
     </div>
     
     
@@ -348,14 +348,20 @@
             </div>
             <div class="col-lg-4 card">
                 <form method="POST" class="mx-2 my-2">{% csrf_token %}
-                    <h2>Мы с вами свяжемся</h2>
+                    <h2>Регистрация</h2>
                     <input type="text" name="name" id="Name1" class="form-control mb-2" placeholder="Имя">
-                    <input type="number" name="phone" class="form-control mb-2" id="" required placeholder="Телефон">
-                    <input type="email" name="email" class="form-control mb-2" id=""
-                        placeholder="Почта (необязательно)">
-                    <input type="textarea" name="message" class="form-control mb-2" id=""
-                        placeholder="Сообщение (необязательно)">
-                    <button type="submit" class="btn btn-primary mb-1 btn-xl">Отправить</button>
+                        <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">+</span>
+                        </div>
+                        <input type="text" name="phone" pattern="[789][0-9]{11}" class="form-control mb-2" id="" required
+                            placeholder="Телефон" aria-describedby="basic-addon1">
+                        </div>
+                        <input type="email" name="email" class="form-control mb-2" id="" required
+                            placeholder="Почта">
+                        <input type="textarea" name="message" class="form-control mb-2" id=""
+                            placeholder="Сообщение (необязательно)">
+                    <button type="submit" class="btn btn-primary mb-1 btn-xl">Зарегистрироваться</button>
                 </form>
             </div>
             <div class="col-lg-4">
@@ -433,10 +439,20 @@
 
 
                         <input type="text" name="name" id="Name1" class="form-control mb-2" placeholder="Имя">
-                        <input type="number" name="phone" class="form-control mb-2" id="" required
-                            placeholder="Телефон">
-                        <input type="email" name="email" class="form-control mb-2" id=""
-                            placeholder="Почта (необязательно)">
+                        <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">+</span>
+                        </div>
+                        <input type="text" name="phone" pattern="[789][0-9]{11}" class="form-control mb-2" id="" required
+                            placeholder="Телефон" aria-describedby="basic-addon1">
+                        </div>
+
+                        
+                          
+
+
+                        <input type="email" name="email" class="form-control mb-2" id="" required
+                            placeholder="Почта">
                         <input type="textarea" name="message" class="form-control mb-2" id=""
                             placeholder="Сообщение (необязательно)">
 

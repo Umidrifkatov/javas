@@ -43,7 +43,7 @@ def mainview(request):
 Почта <strong>{email}</strong>
 Сообщение <strong>{message}</strong>"""
         send_welcome(a)
-        return render(request, 'index.html')
+        return render(request, 'done.html')
     else:
         return render(request, 'index.html')
 
