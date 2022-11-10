@@ -69,7 +69,7 @@
     
     
     <div class="col-md-6">
-        <img src="{% static 'assets/img/bene.png'%}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" height="400" loading="lazy">
+        <img src="{% static 'assets/img/bene.png'%}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy">
     </div>
 
     
@@ -346,7 +346,7 @@
                 <p>Организацией туров по городам Узбекистан</p>
 
             </div>
-            <div class="col-lg-4 card">
+            <div class="col-lg-4 card" style="max-width: 400px;">
                 <form method="POST" class="mx-2 my-2">{% csrf_token %}
                     <h2>Регистрация</h2>
                     <input type="text" name="name" id="Name1" class="form-control mb-2" placeholder="Имя">
