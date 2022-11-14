@@ -36,12 +36,15 @@ def mainview(request):
         email = request.POST['email']
         message = request.POST['message']
         
-        a = f"""Новый запрос 
+        a = f"""Новый запрос с benedictwilmes.uz
 
-Имя <strong>{name}</strong>
-Телефон <strong>{phone}</strong>
-Почта <strong>{email}</strong>
-Сообщение <strong>{message}</strong>"""
+<strong>Имя</strong>  {name}
+
+<strong>Телефон</strong>  +{phone}
+
+<strong>Почта</strong>  {email}
+
+<strong>Сообщение</strong>   {message}"""
         send_welcome(a)
         return render(request, 'done.html')
     else:
