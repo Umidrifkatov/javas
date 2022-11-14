@@ -9,10 +9,6 @@ import telebot
 bot = telebot.TeleBot(settings.TOKEN, threaded=False)
 
 
-
-
-
-
 @csrf_exempt
 def worker(request):
     if request.META['CONTENT_TYPE'] == 'application/json':
